@@ -328,9 +328,8 @@
 }
 
 #nextToy {
-    position: absolute;
-    right: 25px;
-    
+  position: absolute;
+  right: 25px;    
 }
 
 .cont-4 {
@@ -386,4 +385,14 @@
   display: inline-block;
   transition: 1s;
   position: absolute;
+}
+
+#backfashion {
+  display: none;
+  font-size: 25px;
+}
+
+#nextfashion {
+  position: absolute;
+  right: 25px;    
 }
