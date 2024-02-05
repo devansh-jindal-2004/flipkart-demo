@@ -328,7 +328,71 @@
 }
 
 #nextToy {
-    position: absolute;
-    right: 25px;
-    
+  position: absolute;
+  right: 25px;    
+}
+
+.cont-4 {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.fashion {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.fashion-head {
+  display: flex;
+  padding: 20px;
+  padding-bottom: 7px;
+}
+
+.fashion-heading {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 550;
+}
+
+.fashion-icon {
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.fashion-cont {
+  position: relative;
+  width: 100%;
+  height: 237px;
+  overflow: hidden;
+}
+
+.fashion-card {
+  max-height: 100%;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #e0e0e0;
+  display: inline-block;
+  transition: 1s;
+  position: absolute;
+}
+
+#backfashion {
+  display: none;
+  font-size: 25px;
+}
+
+#nextfashion {
+  position: absolute;
+  right: 25px;    
 }

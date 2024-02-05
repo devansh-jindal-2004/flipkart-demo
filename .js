@@ -139,40 +139,80 @@ let rollImg = ()=>{
 
 
 let rollToy = document.querySelectorAll(".toy-card");
-        let nextToy = document.querySelector("#nextToy");
-        let backToy = document.querySelector("#backToy");
+let nextToy = document.querySelector("#nextToy");
+let backToy = document.querySelector("#backToy");
 
-        let countToy = 0;
-        //console.log(rollToy)
+let countToy = 0;
 
-        rollToy.forEach(
-            (rollingToy,index)=>{
-                rollingToy.style.left = `${index*16.67}%`
-            }
-        )
+rollToy.forEach(
+    (rollingToy,index)=>{
+        rollingToy.style.left = `${index*16.67}%`
+    }
+)
 
-         let gofortoy = () => {
-            countToy++;
-            if(countToy == 1){
-                nextToy.style.display = "none";
-                backToy.style.display = "block";
-            }
-            rollImgToy();
+let gofortoy = () => {
+    countToy++;
+    if(countToy == 1){
+        nextToy.style.display = "none";
+        backToy.style.display = "block";
+    }
+    rollImgToy();
+}
+
+let gobactoy = () => {
+    countToy--;
+    if(countToy == 0){
+        backToy.style.display = "none";
+        nextToy.style.display = "block";
+    }
+    rollImgToy();
+}
+
+let rollImgToy = ()=>{
+    rollToy.forEach(
+        (rollingToy) => {
+            rollingToy.style.transform = `translateX(-${countToy*220}%)`
         }
+    )
+}
 
-        let gobactoy = () => {
-            countToy--;
-            if(countToy == 0){
-                backToy.style.display = "none";
-                nextToy.style.display = "block";
-            }
-            rollImgToy();
-        }
 
-        let rollImgToy = ()=>{
-            rollToy.forEach(
-                (rollingToy) => {
-                    rollingToy.style.transform = `translateX(-${countToy*220}%)`
-                }
-            )
+
+
+let rollfashion = document.querySelectorAll(".fashion-card");
+let nextfashion = document.querySelector("#nextfashion");
+let backfashion = document.querySelector("#backfashion");
+
+let countfashion = 0;
+
+rollfashion.forEach(
+    (rollingfashion,index)=>{
+        rollingfashion.style.left = `${index*16.67}%`
+    }
+)
+
+let goforfashion = () => {
+    countfashion++;
+    if(countfashion == 1){
+        nextfashion.style.display = "none";
+        backfashion.style.display = "block";
+    }
+    rollImgfashion();
+}
+
+let gobacfashion = () => {
+    countfashion--;
+    if(countfashion == 0){
+        backfashion.style.display = "none";
+        nextfashion.style.display = "block";
+    }
+    rollImgfashion();
+}
+
+let rollImgfashion = ()=>{
+    rollfashion.forEach(
+        (rollingfashion) => {
+            rollingfashion.style.transform = `translateX(-${countfashion*120}%)`
         }
+    )
+}
